@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react'
-import './App.css'
 import { FormAddTask } from './components/FormAddTask/FormAddTask'
 import { Header } from './components/Header/Header'
 import { Task } from './components/Task/Task'
@@ -7,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Toast } from 'primereact/toast'
 import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog'
 import 'primeicons/primeicons.css';
+import { StyledContainer } from './Styles/styles'
         
 export interface ITask {
   id: string,
@@ -51,15 +51,15 @@ const reject = () => {
 }
 
   return (
-    <>
+    <StyledContainer>
       <Header/>
       <FormAddTask createTask={handleCreateNewTask}/>
       {tasks.map(task => (
         <Task  key={task.id} data={task} checkChange={handleCheckChange} deleteTask={handleDeleteTask}/>
       ))}
-      <Toast ref={toast} position="bottom-center"/>
+      <Toast ref={toast} position="top-center" className='toast'/>
     <ConfirmDialog />
-    </>
+    </StyledContainer>
   )
 }
 
