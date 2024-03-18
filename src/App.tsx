@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
-import { FormAddTask } from './components/FormAddTask/FormAddTask'
-import { Header } from './components/Header/Header'
-import { Task } from './components/Task/Task'
+import { FormAddTask } from './components/FormAddTask'
+import { Header } from './components/Header'
+import { Task } from './components/Task'
 import { v4 as uuidv4 } from 'uuid';
 import { Toast } from 'primereact/toast'
 import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog'

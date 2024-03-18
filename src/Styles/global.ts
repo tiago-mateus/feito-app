@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     body{
         background: #111111;
-        background-image: url("../src/assets/bg2.png");
+        background-image: url("/bg.png");
         background-size:cover;
         background-repeat: no-repeat;
         -webkit-font-smoothing: antialiased;
