@@ -5,6 +5,7 @@ export const StyledTask = styled.div`
     color: white;
     justify-content: center;
     flex-wrap:wrap;
+    word-break: break-all;
 
     hr{
         border: none;

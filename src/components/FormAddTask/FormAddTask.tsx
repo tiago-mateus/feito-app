@@ -31,7 +31,7 @@ export function FormAddTask({ createTask }: Props) {
 
   const show = () => {
     if (toast.current) {
-      toast.current.show({ severity: 'success', summary: 'Sucesso', detail: 'Tarefa crida. =)' });
+      toast.current.show({ severity: 'success', summary: 'Sucesso', detail: 'Tarefa crida. =)', life:1500 });
     }
   };
   function handleCreateNewTask() {
@@ -47,7 +47,7 @@ export function FormAddTask({ createTask }: Props) {
         placeholder="Escreva suas tarefas...e adicione com um Enter!"
         {...register("taskContent")}
       />
-      <Toast  ref={toast} position="bottom-center"/>
+      <Toast  ref={toast} position="bottom-center" className="toast" />
       {errors.taskContent ? <ValidateMessage><h1>{errors.taskContent.message}</h1></ValidateMessage> : ""}
     </Form>
     

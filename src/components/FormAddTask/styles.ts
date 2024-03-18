@@ -18,6 +18,9 @@ export const Form = styled.form`
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    .toast{
+        width: 90%;
+    }
 `
 
 export const ValidateMessage = styled.div`
